@@ -10,7 +10,7 @@ Sorting Hat for Harry Potter fans to determine what house they would be in.
 
 ## API and Data Sample
 
-http://hp-api.herokuapp.com/api/characters/house/:house 
+http://hp-api.herokuapp.com/api/characters/
 
 {
         "name": "Harry Potter",
