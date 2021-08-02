@@ -40,12 +40,10 @@ http://hp-api.herokuapp.com/api/characters/
 Desktop:
 https://wireframe.cc/pro/pp/c71126146461445
 
-### MVP/PostMVP
+![image](https://user-images.githubusercontent.com/88211804/127893577-ef0e64d8-573e-4cb6-a0e8-cfc31dc7a347.png)
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
 - Find and use external api 
 - Successfully pull info from API - including images of housemates
@@ -71,7 +69,10 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 ## Priority Matrix
 
+https://app.conceptboard.com/board/t09k-bch4-bua5-p36d-tekz
+
 ![image](https://user-images.githubusercontent.com/88211804/127892837-d373308d-5336-4af7-a0d2-04ca154f7643.png)
+
 
 ## Timeframes
 
