@@ -6,7 +6,7 @@ Harry Potter https://github.com/tiffanybibby/HarryPotter
 
 ## Project Description
 
-Sorting Hat for Harry Potter fans to determine what house they would be in.
+This app will display info about well-known Harry Potter characters. The user will be able to view facts about their favorite characters or maybe learn something new or about a character they are less familiar with. Additional functionality to be added to view characters by student/staff or house.
 
 ## API and Data Sample
 
@@ -40,21 +40,23 @@ http://hp-api.herokuapp.com/api/characters/
 Desktop:
 https://wireframe.cc/pro/pp/c71126146461445
 
-![image](https://user-images.githubusercontent.com/88211804/127893577-ef0e64d8-573e-4cb6-a0e8-cfc31dc7a347.png)
+![Homepage 2](https://user-images.githubusercontent.com/88211804/127904614-43f48cec-208d-4a7c-877e-9a5461ed4b45.png)
 
 
 #### MVP 
 
 - Find and use external api 
-- Successfully pull info from API - including images of housemates
+- Successfully pull info from API - including images of characters
 - Use of HTML, CSS, & JAVASCRIPT
-- User can answer questions + event listener
-- Working sorting function + event listener
+- User can see all characters and facts
 
 #### PostMVP  
 
-- Switch API if preffered API is back up and running
-- Add a quiz based on characters in house
+- Working sorting function
+- Add filter by staff
+- Add filter by student
+- Add filter by house w/ dropdown for all 4
+- Add a quiz based on characters
 
 ## Project Schedule
 
@@ -79,14 +81,20 @@ https://app.conceptboard.com/board/t09k-bch4-bua5-p36d-tekz
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Pseudocode | H | 2hrs| |  |
-| HTML Structure | H | 3hrs| |  |
-| Adding Form | H | 3hrs| | |
-| Working with API | H | 3hrs| |  |
-| Sorting Function| H | 3hrs| |  |
+| HTML Structure | H | 4hrs| |  |
+| Setting up JavaScript frame | H | 3hrs| | |
+| Creating loop | H | 3hrs| |  |
+| Working with API | H | 5hrs| |  |
+| Creating Buttons | H | 3hrs| |  |
+| Creating Functions| H | 3hrs| |  |
+| Linking images | H | 3hrs| |  |
 | Working with Event Listeners | H | 3hrs| |  |
-| CSS styling | H | 3hrs| |  |
-| Debugging and Testing | H | 3hrs| |  |
-| Total | H | 23hrs|  |  |
+| CSS Formating | H | 3hrs| |  |
+| Organizing code | H | 3hrs| |  |
+| Polishing Design| H | 3hrs| |  |
+| Debugging | H | 5hrs| |  |
+| Testing | H | 3hrs| |  |
+| Total | H | 49hrs|  |  |
 
 ## Code Snippet
 
