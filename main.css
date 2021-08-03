@@ -2,9 +2,10 @@
   font-family: 'Fira Sans', sans-serif;
 }
 
-body{
-
-}
+body {
+  background-image: url("https://cdn.vox-cdn.com/thumbor/6JL8hhS5oJH_DwPe5KU2w5Md0yM=/0x0:3840x2160/1200x800/filters:focal(2114x551:2728x1165)/cdn.vox-cdn.com/uploads/chorus_image/image/68662073/Hippogriff_Screenshot.0.jpg");
+  background-color: #cccccc;
+ }
 
 h1, h2, h3, h4, h5{
   font-family: 'Tahoma', sans-serif;
