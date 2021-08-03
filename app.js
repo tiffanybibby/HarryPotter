@@ -7,26 +7,33 @@ const dataContainer = document.querySelector('#data-container')
 
 
 // console.log(form)
+function displayAllCharacters() {
+  const getAllCharacters = async () => {
+    try {
+      const response = await axios.get(url)
+      console.log(response)
+      const data = response.data
+      console.log(data)
+      for (let i = 0; i < data.length; i++) {
+        console.log(data[i])
+        const characterList = data[i].name
+        console.log(characterList)
+        const header = document.querySelector('.header')
+        header.innerText = characterList
+        const card = document.querySelector('.card')
+        card.style.backgroundImage = `url(${data[i].image})`
 
-const getAllCharacters = async () => {
-  try {
-    const response = await axios.get(url)
-    for (let i = 0; i < response.data.length; i++) {
-      console.log(response.data[i])
-      console.log(response.data[i].name)
-      const characterList = Object.values(response.data)
-      console.log(characterList)
-      // setOptionTags(characterList)
 
-      return characterList
-    }
+
+      }
+    
     } catch (error) {
       console.error(error)
     }
   }
-getAllCharacters()
+  getAllCharacters()
+}
 
-  
 // function setOptionTags(list) {
 //   list.forEach((character) => {
 //     // console.log()
@@ -36,4 +43,4 @@ getAllCharacters()
 //     selectTag.append(optionTag)
 //   })
 //   return list
-// }
+displayAllCharacters() 
