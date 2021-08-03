@@ -18,11 +18,12 @@ function displayAllCharacters() {
         console.log(data[i])
         const characterList = data[i].name
         console.log(characterList)
-        const header = document.querySelector('.header')
-        header.innerText = characterList
+        const cardHeader = document.querySelector('.header')
+        cardHeader.innerText = characterList
         const card = document.querySelector('.card')
         card.style.backgroundImage = `url(${data[i].image})`
-
+        const cardBody = document.querySelector('.card-body')
+        cardBody.innerText = (data[i].actor), (data[i].ancestry)
 
 
       }
