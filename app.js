@@ -26,6 +26,7 @@ function displayAllCharacters() {
         const filterDiv = document.createElement("div");
         const cardHeader = document.createElement("div");
         const cardBody = document.createElement("div");
+        
 
         filterDiv.appendChild(cardHeader)
         filterDiv.appendChild(cardBody)
@@ -38,15 +39,10 @@ function displayAllCharacters() {
         cardContainer.classList.add('card-container')
         card.classList.add('card')
         filterDiv.classList.add('filter')
-        cardHeader.classList.add('header')
+        cardHeader.classList.add('card-header')
         cardBody.classList.add('card-body')
-
-
-        // const cardHeader = document.querySelector('.header')
         
-        // const card = document.querySelector('.card')
         card.style.backgroundImage = `url(${data[i].image})`
-        // const cardBody = document.querySelector('.card-body')
         cardBody.innerText = `House: ${data[i].house}
         Species: ${data[i].species}
         Ancestry: ${data[i].ancestry}

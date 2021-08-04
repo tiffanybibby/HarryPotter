@@ -1,6 +1,3 @@
-*{
-  font-family: 'Fira Sans', sans-serif;
-}
 
 body {
   background-image: url("https://cdn.vox-cdn.com/thumbor/6JL8hhS5oJH_DwPe5KU2w5Md0yM=/0x0:3840x2160/1200x800/filters:focal(2114x551:2728x1165)/cdn.vox-cdn.com/uploads/chorus_image/image/68662073/Hippogriff_Screenshot.0.jpg");
@@ -14,26 +11,29 @@ body {
   padding: 60px;
   text-align: center;
   background: rgba(0, 0, 0, 0);
-  color: white;
+  color: black;
   font-size: 24px;
   border: 1px dashed black;
   flex-wrap: wrap;
 }
 
-h1, h2, h3, h4, h5{
-  font-family: 'Tahoma', sans-serif;
+img {
+  max-width: 400px;
+  max-height: auto;
+  align-items: center;
+}
+h1, h2, h3, h4 {
+  font-family: "Oswald", Helvetica;
   letter-spacing: 2px;
   text-align: center;
 }
 
-ul{
-  padding: 0;
+h5, h6 {
+  font-family:"Crimson Text", Georgia;
 }
 
-h1{
-  font-weight: bolder;
-  margin: 0;
-  padding: 20px;
+ul{
+  padding: 0;
 }
 
 main{
@@ -52,10 +52,6 @@ main{
   padding: 150px
 }
 
-.card-container{
-  width: 100%;
-}
-
 .card{
   margin: 10px;
   height: 300px;
@@ -63,41 +59,35 @@ main{
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-}
-
-.full-width{
-  background-color: #ed7878;
-}
-.nav{
-  max-width: 1000px;
-  height: 100px;
-  margin: 0 auto;
-}
-
-.card .header{
-  font-size: 1.3rem;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
-.header{
+.card-header{
   padding:7px;
-  background:rgb(58, 58, 58);
+  margin-bottom: 50px;
+  background:rgba(58, 58, 58, .5);
   color: #fff;
   flex-wrap: wrap;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .card-body{
-  font-family: Anton;
+  text-transform: capitalize;
+  margin: 10px;
+  background: rgba(0, 0, 0, .5);
+  font-family: "Oswald", Helvetica;
+}
+
+.filter:hover + .card-body{
+  display: block;
 }
 
 .filter{
-  background: rgba(221, 221, 221, 0.5);
+  background: rgba(221, 221, 221, 0.3);
   width: 100%;
   height: 100%;
-}
-
-.details{
-  opacity: 0;
 }
 
 @media only screen and (min-width: 700px){
