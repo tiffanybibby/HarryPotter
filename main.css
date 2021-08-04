@@ -35,7 +35,9 @@ h5, h6 {
   font-family:"Crimson Text", Georgia;
   padding: 0;
 }
-
+button {
+  display: inline;
+}
 ul{
   padding: 0;
 }
