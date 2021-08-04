@@ -10,11 +10,13 @@ body {
 .page-header {
   padding: 60px;
   text-align: center;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, .2);
   color: black;
   font-size: 24px;
   border: 1px dashed black;
   flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
 }
 
 img {
@@ -26,10 +28,12 @@ h1, h2, h3, h4 {
   font-family: "Oswald", Helvetica;
   letter-spacing: 2px;
   text-align: center;
+  padding: 0;
 }
 
 h5, h6 {
   font-family:"Crimson Text", Georgia;
+  padding: 0;
 }
 
 ul{
@@ -74,13 +78,15 @@ main{
 }
 
 .card-body{
+  display: none;
   text-transform: capitalize;
   margin: 10px;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(255,255,255,.5);
   font-family: "Oswald", Helvetica;
+  text-align: center;
 }
 
-.filter:hover + .card-body{
+.filter:hover .card-body{
   display: block;
 }
 
@@ -90,20 +96,32 @@ main{
   height: 100%;
 }
 
-@media only screen and (min-width: 700px){
+footer {
+  text-align: center;
+}
+
+@media only screen and (min-width: 300px){
+  .page-header{
+    width: 600px;
+    align-content: center;
+  }
+  img {
+    width: 80%;
+    align-items: center;
+  }
   .card-container{
     width: 50%;
   }
-  .card-list{
+  .character-list{
     width: 90%;
   }
-}
+  .card-body{
+    height: 75%;
+    margin-top: 10px;
+    padding-bottom: 10px;}
 
-@media only screen and (min-width: 900px){
-  .card-container{
-    width: 33.3%;
-  }
-  .card-list{
-    width: 90%;
+  .card-header{
+    margin: 0;
+    padding: 10px;
   }
 }
