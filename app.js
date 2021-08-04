@@ -58,7 +58,6 @@ function displayAllCharacters() {
         Actor Name: ${data[i].actor}
         `
 
-
       }
     
     } catch (error) {
