@@ -3,14 +3,18 @@ const studentUrl = 'http://hp-api.herokuapp.com/api/characters/students';
 const staffUrl = 'http://hp-api.herokuapp.com/api/characters/staff';
 
 
-
 const characterList = document.querySelector('.character-container')
-const selectTag = document.querySelector('#btn4')
+const selectTag = document.querySelector('#select-tag')
+const allCharactersBtn = document.querySelector('#btn1')
+const studentBtn = document.querySelector('#btn2')
+const staffBtn = document.querySelector('#btn3')
+const form = document.querySelector('form')
 
-console.log(selectTag)
+console.log(form)
+
+// console.log(selectTag)
 
 // Function for All Characters List
-function displayAllCharacters() {
   const getAllCharacters = async () => {
     remove(characterList)
     try {
@@ -25,16 +29,15 @@ function displayAllCharacters() {
     }
   }
   getAllCharacters()
-}
-displayAllCharacters()
+
 
 // // Function for All Students List
-function displayStudents() {
+
   const getStudents = async () => {
     remove(characterList)
     try {
       const response = await axios.get(studentUrl)
-      // console.log(response)
+      // console.log("students",response)
       const data = response.data
       // console.log(data)
       buildElements(data)
@@ -43,17 +46,16 @@ function displayStudents() {
       console.error(error)
     }
   }
-  getStudents()
-}
+
+
 
 
 // //Function for All Staff List
-function displayStaff() {
   const getStaff = async () => {
     remove(characterList)
     try {
       const response = await axios.get(staffUrl)
-      // console.log(response)
+      console.log("staff", response)
       const data = response.data
       // console.log(data)
       buildElements(data)
@@ -62,97 +64,108 @@ function displayStaff() {
       console.error(error)
     }
   }
-  getStaff()
-}
+
 
 //Function for All Houses Filter List
-function displayHouse() {
-  const getHouse = async () => {
-    const houseUrl = `http://hp-api.herokuapp.com/api/characters/house/${houses}`
-    remove(characterList)
+
+const getHouse = async (houses) => {
+  remove(characterList)
     try {
+      const houseUrl = `http://hp-api.herokuapp.com/api/characters/house/${houses}`;
       const response = await axios.get(houseUrl)
       console.log(response)
       const data = response.data
       console.log(data)
       buildElements(data)
-      const houses = [...new Set(data.map(({ house }) => house))]
-      console.log(houses)
-      setOptionTags(houses)
-
+      // for (let i = 0; i < (data.length = 7); i++) {
+      //   const houses = [...new Set(data.map(({ house }) => house))]
+      //   console.log(houses)
+      //   setOptionTags(houses)
+      //   return houses
+      // }
     } catch (error) {
       console.error(error)
     }
   }
-  getHouse(ravenclaw)
-}
+  
+
+  // Create form option tags from request
+
+  // function setOptionTags(houses) {
+  //   house.forEach((houses) => {
+  //     const optionTag = document.createElement('option')
+  //     optionTag.id = "houseOption"
+  //     optionTag.value = houses
+  //     optionTag.textContent = houses
+  //     selectTag.appendChild(optionTag)
+  //   })
+  //   return house
+  // }
 
 
-// Create form option tags from request
-
-function setOptionTags(house) {
-  // console.log(houses)
-  house.forEach((houses) => {
-    // console.log(house)
-    const optionTag = document.createElement('option')
-    optionTag.value = houses
-    optionTag.textContent = houses
-    selectTag.appendChild(optionTag)
-  })
-  return list
-}
+  // Get value of option tag from the form select tag
 
 
-// Get value of option tag from the form select tag
 
-function getSelectValue(e) {
+  //Event Handler
+  allCharactersBtn.addEventListener("click", getAllCharacters)
+  studentBtn.addEventListener("click", getStudents)
+staffBtn.addEventListener("click", getStaff)
+form.addEventListener("submit", (e) => {
   e.preventDefault()
-  const houseValue = selectTag.value
-  console.log(houseValue)
-  getBreedImage(houseValue)
-  return houseValue
-}
+  // selectTag.value
+  console.log(selectTag.value)
+  getHouse(selectTag.value)
+  })
 
 
-//Event Handler
 
-document.getElementById("btn1").onclick = displayAllCharacters;
-document.getElementById("btn2").onclick = displayStudents;
-document.getElementById("btn3").onclick = displayStaff;
-document.getElementById("btn4").onclick = getSelectValue;
+  // async function showHouse(houseValue) {
+  //   remove(characterList)
+  //   try {
+  //     const houseURL = `http://hp-api.herokuapp.com/api/characters/house/${houseValue}`
+  //     const response = await axios.get(houseURL)
+  //     const data = response.data
+  //     console.log(response.data)
+  //     buildElements(data)
+  //     // console.log(houses)
+  //   } catch (error) {
+  //     console.error(error)
+  //   }
+  // }
 
-//Build Elements
+  // Build Elements
 
-function buildElements(data) {
-  for (let i = 0; i < data.length; i++) {
-    // console.log(data[i])
-    const characters = data[i].name
-    // console.log(characters)
-
-
-    const cardContainer = document.createElement("div");
-    const card = document.createElement("div");
-    const filterDiv = document.createElement("div");
-    const cardHeader = document.createElement("div");
-    const cardBody = document.createElement("div");
+  function buildElements(data) {
+    for (let i = 0; i < data.length; i++) {
+      // console.log(data[i])
+      const characters = data[i].name
+      // console.log(characters)
 
 
-    filterDiv.appendChild(cardHeader)
-    filterDiv.appendChild(cardBody)
+      const cardContainer = document.createElement("div");
+      const card = document.createElement("div");
+      const filterDiv = document.createElement("div");
+      const cardHeader = document.createElement("div");
+      const cardBody = document.createElement("div");
 
-    characterList.appendChild(cardContainer)
-    cardContainer.appendChild(card)
-    card.appendChild(filterDiv)
-    cardHeader.innerText = data[i].name
 
-    cardContainer.classList.add('card-container')
-    card.classList.add('card')
-    filterDiv.classList.add('filter')
-    cardHeader.classList.add('card-header')
-    cardBody.classList.add('card-body')
+      filterDiv.appendChild(cardHeader)
+      filterDiv.appendChild(cardBody)
 
-    card.style.backgroundImage = `url(${data[i].image})`
-    cardBody.innerText = `House: ${data[i].house}
+      characterList.appendChild(cardContainer)
+      cardContainer.appendChild(card)
+      card.appendChild(filterDiv)
+      cardHeader.innerText = data[i].name
+
+      cardContainer.classList.add('card-container')
+      card.classList.add('card')
+      filterDiv.classList.add('filter')
+      cardHeader.classList.add('card-header')
+      cardBody.classList.add('card-body')
+
+      card.style.backgroundImage = `url(${data[i].image})`
+      cardBody.innerText = `House: ${data[i].house}
     Species: ${data[i].species}
     Ancestry: ${data[i].ancestry}
     DOB: ${data[i].dateOfBirth}
@@ -163,8 +176,8 @@ function buildElements(data) {
     Actor Name: ${data[i].actor}
     `
 
+    }
   }
-}
 
 function remove(element) {
   while (element.lastChild) {
