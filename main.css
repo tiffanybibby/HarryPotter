@@ -24,6 +24,7 @@ img {
   max-height: auto;
   align-items: center;
 }
+
 h1, h2, h3, h4 {
   font-family: "Oswald", Helvetica;
   letter-spacing: 2px;
@@ -35,11 +36,24 @@ h5, h6 {
   font-family:"Crimson Text", Georgia;
   padding: 0;
 }
-button {
-  display: inline;
+button, select {
+  border: none;
+  border-radius: 12px;
+  margin: 0px 20px 0px 20px;
+  width: 120px;
+  height: 20px;
+  text-align: center;
+  background: rgba(255,255,255,.5);
+  display: wrap;
 }
-ul{
-  padding: 0;
+
+.button-container {
+  display: inline-flex;
+  padding: 10px ;
+  align-content: space-between;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main{
@@ -47,7 +61,7 @@ main{
   margin: 0 auto;
 }
 
-.character-list{
+.character-container{
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
