@@ -63,10 +63,10 @@ https://wireframe.cc/pro/pp/c71126146461445
 |  Day | Deliverable | Status
 |---|---| ---|
 |July 30| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|August 2| Project Approval / Core Application Structure (HTML, CSS, etc.) | Incomplete
-|August 3| Pseudocode / actual code | Incomplete
-|August 4| Initial Clickable Model  | Incomplete
-|August 5| MVP | Incomplete
+|August 2| Project Approval / Core Application Structure (HTML, CSS, etc.) | Complete
+|August 3| Pseudocode / actual code | Complete
+|August 4| Initial Clickable Model  | Complete
+|August 5| MVP | Complete
 |August 6| Presentations | Incomplete
 
 ## Priority Matrix
@@ -80,31 +80,71 @@ https://app.conceptboard.com/board/t09k-bch4-bua5-p36d-tekz
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Pseudocode | H | 2hrs| |  |
-| HTML Structure | H | 4hrs| |  |
-| Setting up JavaScript frame | H | 3hrs| | |
-| Creating loop | H | 3hrs| |  |
-| Working with API | H | 5hrs| |  |
-| Creating Buttons | H | 3hrs| |  |
-| Creating Functions| H | 3hrs| |  |
-| Linking images | H | 3hrs| |  |
-| Working with Event Listeners | H | 3hrs| |  |
-| CSS Formating | H | 3hrs| |  |
-| Organizing code | H | 3hrs| |  |
-| Polishing Design| H | 3hrs| |  |
-| Debugging | H | 5hrs| |  |
-| Testing | H | 3hrs| |  |
-| Total | H | 49hrs|  |  |
+| Pseudocode | H | 2hrs| 1hr| 1hr |
+| HTML Structure | H | 4hrs| 2hrs| 2hrs |
+| Setting up JavaScript frame | H | 3hrs|4hrs |4hrs |
+| Creating loop | H | 3hrs|10hrs | 10hrs |
+| Working with API | H | 5hrs|10hrs|10hrs  |
+| Creating Buttons | H | 3hrs|2hrs | 2hrs |
+| Creating Functions| H | 3hrs|16hrs | 16hrs |
+| Linking images | H | 3hrs| 1hr| 1hr |
+| Working with Event Listeners | H | 3hrs|5hrs | 5hrs |
+| CSS Formating | H | 3hrs|20hrs |20hrs  |
+| Organizing code | H | 3hrs|3hrs |3hrs  |
+| Polishing Design| H | 3hrs|2hr | 2hr |
+| Debugging | H | 5hrs|5hrs |5hrs  |
+| Testing | H | 3hrs|3hrs |3hrs  |
+| Total | H | 49hrs|84hrs  | 84hrs |
 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+@media only screen and (min-width: 320px) and (max-width: 480px){
+  .card-container{
+    width: 50%;
+  }
+  .character-container{
+    width: 90%;
+    padding: 0px 0px;
+  }
+  .page-header{
+    width: max-content;
+    align-items: center;
+    font-size: 18px;
+  }
+  img {
+    max-width: 318px;
+  }
+  #btn1{
+    margin-left: 70px;
+  }
+  #btn2, #btn3{
+  margin-right: 10px;
+  }
+  #btn4 {
+    flex-wrap: wrap; 
+    width: 90px;
+  }
+  .button-container{
+    max-width: 70%;
+    padding: 10px 20px;
+  }
+  form{
+    max-width: 18%;
+    margin-left:32px; 
+    flex-wrap: wrap;
+  } 
+  button {
+    margin: 0px 0px 0px 3px;
+  }
+  .card-header{
+    font-size: 10px;
+  }
 }
+  // This media query optimizes the site for mobile
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+Changes were made to the wireframe/layout of the site because I decided to have details hovered over each card.
