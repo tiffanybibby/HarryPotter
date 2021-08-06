@@ -145,25 +145,34 @@ footer {
   .page-header{
     width: max-content;
     align-items: center;
+    font-size: 18px;
+  }
+  img {
+    max-width: 318px;
   }
   #btn1{
     margin-left: 70px;
   }
   #btn2, #btn3{
   margin-right: 10px;
-}
-.button-container{
-  max-width: 60%;
-  padding: 10px 10px;
-}
-form{
-  max-width: 20%;
-  margin-left:80px;
-} 
-button {
-  margin: 0px 0px 0px 3px;
-}
-.card-header{
-  font-size: 10px;
-}
+  }
+  #btn4 {
+    flex-wrap: wrap; 
+    width: 90px;
+  }
+  .button-container{
+    max-width: 70%;
+    padding: 10px 20px;
+  }
+  form{
+    max-width: 18%;
+    margin-left:32px; 
+    flex-wrap: wrap;
+  } 
+  button {
+    margin: 0px 0px 0px 3px;
+  }
+  .card-header{
+    font-size: 10px;
+  }
 }

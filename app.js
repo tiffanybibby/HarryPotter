@@ -1,6 +1,6 @@
-const url = 'http://hp-api.herokuapp.com/api/characters';
-const studentUrl = 'http://hp-api.herokuapp.com/api/characters/students';
-const staffUrl = 'http://hp-api.herokuapp.com/api/characters/staff';
+const url = 'https://hp-api.herokuapp.com/api/characters';
+const studentUrl = 'https://hp-api.herokuapp.com/api/characters/students';
+const staffUrl = 'https://hp-api.herokuapp.com/api/characters/staff';
 
 
 const characterList = document.querySelector('.character-container')
@@ -57,7 +57,7 @@ const form = document.querySelector('form')
 const getHouse = async (houses) => {
   remove(characterList)
     try {
-      const houseUrl = `http://hp-api.herokuapp.com/api/characters/house/${houses}`;
+      const houseUrl = `https://hp-api.herokuapp.com/api/characters/house/${houses}`;
       const response = await axios.get(houseUrl)
       const data = response.data
       buildElements(data)
