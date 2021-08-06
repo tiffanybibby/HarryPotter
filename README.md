@@ -1,8 +1,7 @@
 # Project Overview
 
 ## Project Name
-
-Harry Potter https://github.com/tiffanybibby/HarryPotter
+[HarryPotter](https://tiffanybibby.github.io/HarryPotter/)
 
 ## Project Description
 
