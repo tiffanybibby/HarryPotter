@@ -72,8 +72,8 @@ const getHouse = async (houses) => {
 
   allCharactersBtn.addEventListener("click", getAllCharacters)
   studentBtn.addEventListener("click", getStudents)
-staffBtn.addEventListener("click", getStaff)
-form.addEventListener("submit", (e) => {
+  staffBtn.addEventListener("click", getStaff)
+  form.addEventListener("submit", (e) => {
   e.preventDefault()
   getHouse(selectTag.value)
   })
