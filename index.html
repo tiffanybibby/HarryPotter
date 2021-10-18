@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="./app.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Crimson+Text|Julius+Sans+One|Oswald"
+      rel="stylesheet"
+    />
+    <title>Harry Potter Characters</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./main.css">
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script defer src="./app.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Julius+Sans+One|Oswald" rel="stylesheet">
-  <title>Harry Potter Characters</title>
-</head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta property="og:title" content="Harry Potter Characters" />
+    <meta
+      property="og:description"
+      content="All About the Famous Harry Potter Characters"
+    />
+    <meta property="og:image" content="https://i.imgur.com/N95fHks.png" />
+  </head>
 
-<body>
-  <div class="page-header">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/2180px-Harry_Potter_wordmark.svg.png">
-    <h3>All About The Characters</h3>
-    <h5>“Every human life is worth the same, and worth saving.”</h5>
-    <h6>— Kingsley Shacklebolt, Harry Potter and the Deathly Hallows, Chapter 22</h6>
-  </div>
-  <main>
-    <div class = "button-container">
-      <button id ="btn1"> All Characters </button>
-      <button id ="btn2"> Students </button>
-      <button id ="btn3"> Staff </button>
-      <form>
-      <div><select id ="select-tag"> 
-        <option  disabled selected >Houses</option> 
-        <option value = "gryffindor">Gryffindor</option>
-        <option value = "hufflepuff">Hufflepuff</option>
-        <option value = "ravenclaw">Ravenclaw</option>
-        <option value = "slytherin">Slytherin</option>
-      </select> </div>
-      <div><button id = "btn4">Submit House</button></div>
-      
-    </form>
+  <body>
+    <div class="page-header">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Harry_Potter_wordmark.svg/2180px-Harry_Potter_wordmark.svg.png"
+      />
+      <h3>All About The Characters</h3>
+      <h5>“Every human life is worth the same, and worth saving.”</h5>
+      <h6>
+        — Kingsley Shacklebolt, Harry Potter and the Deathly Hallows, Chapter 22
+      </h6>
     </div>
-    
-    <div class="character-container">
+    <main>
+      <div class="button-container">
+        <button id="btn1">All Characters</button>
+        <button id="btn2">Students</button>
+        <button id="btn3">Staff</button>
+        <form>
+          <div>
+            <select id="select-tag">
+              <option disabled selected>Houses</option>
+              <option value="gryffindor">Gryffindor</option>
+              <option value="hufflepuff">Hufflepuff</option>
+              <option value="ravenclaw">Ravenclaw</option>
+              <option value="slytherin">Slytherin</option>
+            </select>
+          </div>
+          <div><button id="btn4">Submit House</button></div>
+        </form>
+      </div>
 
-    </div>
-  </main>
-</body>
-<footer>
-  ©Tiffany D. Bibby 2021
-</footer>
+      <div class="character-container"></div>
+    </main>
+  </body>
+  <footer>©Tiffany D. Bibby 2021</footer>
 </html>
